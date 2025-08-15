@@ -16,7 +16,8 @@ pipeline {
             steps {
                 script {
                 sh """
-                    echo "Hello Build..." 
+                    echo "Hello Build..."
+                    sleep 10 
                     env
                   """
                   }
