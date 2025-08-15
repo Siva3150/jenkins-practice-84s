@@ -5,6 +5,11 @@ pipeline {
     environment {
         COURSE = 'jenkins'
     }
+
+    options {
+        timeout(time: 10, unit:'SECONDS')
+        disableConcurrentBuilds()
+    }
     
     stages {
         stage('Build') {
@@ -12,6 +17,7 @@ pipeline {
                 script {
                 sh """
                     echo "Hello Build..."
+                    sleep 10 
                     env
                   """
                   }
