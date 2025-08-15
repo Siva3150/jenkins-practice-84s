@@ -20,7 +20,7 @@ pipeline {
             }
         }
     }
-}
+
 
 post{
     always{
@@ -33,4 +33,6 @@ post{
     failure{
         echo 'Hello Failure'
     }
+}
+
 }
